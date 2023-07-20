@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2CA97098-3AA9-4F13-A9A5-31140B311642}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		README.md = README.md
+		lib\settings\stylecop.json = lib\settings\stylecop.json
+		lib\settings\WeatherBoy.ruleset = lib\settings\WeatherBoy.ruleset
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{9D3842B1-1B05-40D6-A291-2630578B9EA4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Components", "Components", "{AB7AC3A4-97D8-4897-95D8-85F67A8643B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Runtimes", "Runtimes", "{5D8AF8A0-402B-47F8-8D59-51010EE4E9B0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherBoy.Runtime.WeatherApi", "src\WeatherBoy.Runtime.WeatherApi\WeatherBoy.Runtime.WeatherApi.csproj", "{04E843DF-E180-4425-9CF0-68620C2304C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataContracts", "DataContracts", "{B7853324-FF51-4418-B202-CBF8456F7D9A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherBoy.Component.WeatherApi", "src\WeatherBoy.Component.WeatherApi\WeatherBoy.Component.WeatherApi.csproj", "{FE36714D-495A-42ED-AEB5-90E81C97F600}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherBoy.Component.WebContext", "src\WeatherBoy.Component.WebContext\WeatherBoy.Component.WebContext.csproj", "{C2EA1255-423E-4CD5-92AC-8E286ECCC9C5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherBoy.DataContract.Weather", "src\WeatherBoy.DataContract.Weather\WeatherBoy.DataContract.Weather.csproj", "{295E1478-D9B8-40C8-9983-16245204E6B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04E843DF-E180-4425-9CF0-68620C2304C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04E843DF-E180-4425-9CF0-68620C2304C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04E843DF-E180-4425-9CF0-68620C2304C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04E843DF-E180-4425-9CF0-68620C2304C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE36714D-495A-42ED-AEB5-90E81C97F600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE36714D-495A-42ED-AEB5-90E81C97F600}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE36714D-495A-42ED-AEB5-90E81C97F600}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE36714D-495A-42ED-AEB5-90E81C97F600}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2EA1255-423E-4CD5-92AC-8E286ECCC9C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2EA1255-423E-4CD5-92AC-8E286ECCC9C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2EA1255-423E-4CD5-92AC-8E286ECCC9C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2EA1255-423E-4CD5-92AC-8E286ECCC9C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{295E1478-D9B8-40C8-9983-16245204E6B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{295E1478-D9B8-40C8-9983-16245204E6B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{295E1478-D9B8-40C8-9983-16245204E6B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{295E1478-D9B8-40C8-9983-16245204E6B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AB7AC3A4-97D8-4897-95D8-85F67A8643B3} = {9D3842B1-1B05-40D6-A291-2630578B9EA4}
+		{5D8AF8A0-402B-47F8-8D59-51010EE4E9B0} = {9D3842B1-1B05-40D6-A291-2630578B9EA4}
+		{04E843DF-E180-4425-9CF0-68620C2304C5} = {5D8AF8A0-402B-47F8-8D59-51010EE4E9B0}
+		{B7853324-FF51-4418-B202-CBF8456F7D9A} = {9D3842B1-1B05-40D6-A291-2630578B9EA4}
+		{FE36714D-495A-42ED-AEB5-90E81C97F600} = {AB7AC3A4-97D8-4897-95D8-85F67A8643B3}
+		{C2EA1255-423E-4CD5-92AC-8E286ECCC9C5} = {AB7AC3A4-97D8-4897-95D8-85F67A8643B3}
+		{295E1478-D9B8-40C8-9983-16245204E6B3} = {B7853324-FF51-4418-B202-CBF8456F7D9A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C12600EC-70C1-4B33-BACF-7562613F4532}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Mapito" Version="1.1.0-alpha" />
+		<PackageReference Include="MediatR" Version="12.1.1" />
+		<PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\WeatherBoy.DataContract.Weather\WeatherBoy.DataContract.Weather.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Domain\Providers\" />
+	</ItemGroup>
+
+</Project>

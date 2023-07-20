@@ -1,0 +1,18 @@
+@BaseUrl = http://localhost:5111
+
+###
+
+GET {{BaseUrl}}/weather/forecast?latitude=55.7696661&longitude=10.9542284
+Accept-Language da-DK
+
+###
+
+GET {{BaseUrl}}/weather/current?latitude=55.7696661&longitude=10.9542284
+Accept-Language da-DK
+
+###
+
+GET {{BaseUrl}}/locations/search?term=videbæ
+Accept-Language da-DK
+
+###
