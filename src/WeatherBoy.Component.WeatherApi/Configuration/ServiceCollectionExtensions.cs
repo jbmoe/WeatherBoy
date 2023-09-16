@@ -21,19 +21,18 @@ public static class ServiceCollectionExtensions
     {
         _services[Services.WeatherApiConfiguration] = ServiceDescriptor.Singleton(config);
 
-        services.AddMapito(mapito =>
-        {
-            mapito
-                .SetMapper<WeatherApiLocation, Location, LocationMapper>()
-                .SetMapper<WeatherApiCondition, WeatherCondition, WeatherConditionMapper>()
-                .SetMapper<WeatherApiForecast.WeatherApiForecastday, WeatherForecastDay, WeatherForecastDayMapper>()
-                .SetMapper<WeatherApiForecast.WeatherApiForecastday.WeatherApiHour, WeatherForecastHour, WeatherForecastHourMapper>()
-                .SetMapper<WeatherApiWeatherForecastResponseModel, WeatherForecast, WeatherForecastMapper>()
-                .SetMapper<WeatherApiCurrent, Weather, WeatherMapper>()
-                .SetMapper<WeatherApiCurrentWeatherResponseModel, CurrentWeather, CurrentWeatherMapper>();
-        });
-
         services
+            .AddMapito(mapito =>
+            {
+                mapito
+                    .SetMapper<WeatherApiLocation, Location, LocationMapper>()
+                    .SetMapper<WeatherApiCondition, WeatherCondition, WeatherConditionMapper>()
+                    .SetMapper<WeatherApiForecast.WeatherApiForecastday, WeatherForecastDay, WeatherForecastDayMapper>()
+                    .SetMapper<WeatherApiForecast.WeatherApiForecastday.WeatherApiHour, WeatherForecastHour, WeatherForecastHourMapper>()
+                    .SetMapper<WeatherApiWeatherForecastResponseModel, WeatherForecast, WeatherForecastMapper>()
+                    .SetMapper<WeatherApiCurrent, Weather, WeatherMapper>()
+                    .SetMapper<WeatherApiCurrentWeatherResponseModel, CurrentWeather, CurrentWeatherMapper>();
+            })
             .Add(_services.Values)
             .AddMediatR(mediator =>
             {
@@ -69,9 +68,9 @@ public static class ServiceCollectionExtensions
         [Services.WeatherApiClient] = ServiceDescriptor.Scoped<IWeatherApiClient, WeatherApiClient>(),
         [Services.WeatherService] = ServiceDescriptor.Scoped<IWeatherService, WeatherService>(),
         [Services.SearchService] = ServiceDescriptor.Scoped<ISearchService, SearchService>(),
-        [Services.WeatherApiApiKeyMiddleware] = ServiceDescriptor.Transient<WeatherApiApiKeyMiddleware, WeatherApiApiKeyMiddleware>(),
-        [Services.WeatherApiLanguageMiddleware] = ServiceDescriptor.Transient<WeatherApiLanguageMiddleware, WeatherApiLanguageMiddleware>(),
-        [Services.CultureProvider] = ServiceDescriptor.Scoped<ICultureProvider, CultureProvider>(),
+        [Services.WeatherApiApiKeyMiddleware] = ServiceDescriptor.Scoped<WeatherApiApiKeyMiddleware, WeatherApiApiKeyMiddleware>(),
+        [Services.WeatherApiLanguageMiddleware] = ServiceDescriptor.Scoped<WeatherApiLanguageMiddleware, WeatherApiLanguageMiddleware>(),
+        [Services.CultureProvider] = ServiceDescriptor.Singleton<ICultureProvider, CultureProvider>(),
     };
 
     #endregion

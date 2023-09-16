@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using System.Globalization;
+using MediatR;
 using WeatherBoy.Component.WeatherApi.Api.Models.Exceptions;
 using WeatherBoy.Component.WeatherApi.Api.Models.Responses;
 using WeatherBoy.Component.WeatherApi.Api.Services;
@@ -23,7 +24,7 @@ public class FetchCurrentWeatherRequestHandler : IRequestHandler<FetchCurrentWea
         {
             var parameters = new Dictionary<string, string>
             {
-                ["q"] = $"{query.Latitude},{query.Longitude}",
+                ["q"] = $"{query.Latitude.ToString(CultureInfo.InvariantCulture)},{query.Longitude.ToString(CultureInfo.InvariantCulture)}",
                 ["aqi"] = query.IncludeAirQualityData ? "yes" : "no",
             };
 
